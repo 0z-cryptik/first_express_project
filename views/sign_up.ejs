@@ -1,0 +1,28 @@
+<div>
+  <h1>Sign up</h1>
+  <form
+    action="/subscribe"
+    method="post">
+    name:
+    <input
+      type="text"
+      name="name"
+      required />
+    email:
+    <input
+      type="email"
+      name="email"
+      required />
+    phone_no:
+    <input
+      type="number"
+      name="phone_no"
+      pattern="[0-9]{13}"
+      required />
+    <button
+      type="submit"
+      value="submit">
+      submit
+    </button>
+  </form>
+</div>

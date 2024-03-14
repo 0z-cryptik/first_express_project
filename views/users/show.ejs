@@ -1,0 +1,46 @@
+<h1>User data for <%= user.fullName() %></h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <td><%= user.fullName() %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= user.email %></td>
+  </tr>
+  <tr>
+    <th>Zip Code</th>
+    <td><%= user.zipCode %></td>
+  </tr>
+  <% if (user.apiToken) { %>
+  <tr>
+    <th>API Token</th>
+    <td><%= user.apiToken %></td>
+  </tr>
+  <% } %>
+</table>
+
+<% if (user.subscribedAccount) { %>
+<h4 class="center">
+  This user has a
+  <a href="<%=`/subscribers/${user.subscribedAccount}` %>">
+    subscribed account</a
+  >
+</h4>
+<% } %>
+
+<div id="buttonHolder">
+  <a href="/users/<%= user._id %>/edit">
+    <Button id="buttons"> edit profile </Button>
+  </a>
+  <a href="/users/<%= user._id %>/delete?_method=DELETE">
+    <Button id="buttons"> delete profile </Button>
+  </a>
+  <a href="/users">
+    <Button id="buttons"> view all profiles </Button>
+  </a>
+  <a href="/">
+    <button id="buttons">home</button>
+  </a>
+</div>

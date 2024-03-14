@@ -1,0 +1,33 @@
+<h1>Subscriber data for <%= subscriber.name %></h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <td><%= subscriber.name %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= subscriber.email %></td>
+  </tr>
+  <tr>
+    <th>Zip Code</th>
+    <td><%= subscriber.zipCode %></td>
+  </tr>
+</table>
+
+<p>This subscriber has <%= subscriber.courses.length %> courses</p>
+
+<div id="buttonHolder">
+  <a href="/subscribers/<%= subscriber._id %>/edit">
+    <Button id="buttons"> edit profile </Button>
+  </a>
+  <a href="/subscribers/<%= subscriber._id %>/delete?_method=DELETE">
+    <Button id="buttons"> delete profile </Button>
+  </a>
+  <a href="/users">
+    <Button id="buttons"> view all profiles </Button>
+  </a>
+  <a href="/">
+    <button id="buttons">home</button>
+  </a>
+</div>

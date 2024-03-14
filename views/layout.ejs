@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/style.css" />
+  </head>
+  <body>
+    <section id="top">
+      <center>
+        <h1 id="logo">RECIPE APP</h1>
+        <div id="buttonHolder">
+          <button id="buttons">Home</button>
+          <button id="buttons">Cooking Courses</button>
+          <button id="buttons">Contact</button>
+        </div>
+      </center>
+    </section>
+
+    <%- body %>
+
+    <div class="flashes">
+      <% if (flashMessages){%> <% if (flashMessages.success){ %>
+      <div class="flash success"><%= flashMessages.success %></div>
+      <% } else if (flashMessages.error){ %>
+      <div class="flash error"><%= flashMessages.error %></div>
+      <% } %> <% } %>
+    </div>
+
+    <div>
+      <% if (loggedIn) { %>
+      <div>
+        Logged in as
+        <a href="/users/<%= currentUser._id %>">
+          <%=currentUser.fullName() %>
+        </a>
+        <a href="/users/logout">
+          <button>Logout</button>
+        </a>
+      </div>
+      <%} else {%>
+      <a href="/users/login">Login</a>
+      <% } %>
+
+      <a class="chatIcon" href="/chat">@</a>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+.subscribers {
+  border-bottom: 1px red solid;
+}
+
+h1#logo {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+div#buttonHolder {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+button#buttons {
+  padding: 5px 20px;
+  background-color: blue;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+}
+
+section#top {
+  border-bottom: 10px solid blue;
+}
+
+form#newUserForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  margin-left: 35%;
+}
+
+h2#formHeader {
+  font-size: x-larger;
+  font-weight: lighter;
+  width: 30%;
+  margin-left: 35%;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  height: 30px;
+  border: 1px gray solid;
+  border-radius: 5px;
+}
+
+button#submit {
+  height: 33px;
+  background-color: blue;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+}
+
+/* Add some basic styling to the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style the table header */
+.table th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style alternating rows for better readability */
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style table cells */
+.table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+/* Make the table header and footer sticky for better usability */
+.table thead,
+.table tfoot {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+}
+
+/* Add some spacing and style to the heading */
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Add a little extra space between cells */
+.table td,
+.table th {
+  white-space: nowrap;
+}
+
+/* Add a hover effect to highlight rows on hover */
+.table tbody tr:hover {
+  background-color: #e0f7fa;
+}
+
+.joined-button {
+  color: white;
+  background-color: red;
+}
+
+#chatPage {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatBox {
+  width: 60%;
+  height: 60%;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+#chatForm {
+  width: 60%;
+}
+
+#chatInput {
+  width: 80%;
+}
+
+.currentUser {
+  color: red;
+}
+
+.currentUser > b {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.chatIcon {
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.flashTwice {
+  animation: flash 2s 2;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    background-color: initial;
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    background-color: red;
+    transform: scale(1.3);
+  }
+}

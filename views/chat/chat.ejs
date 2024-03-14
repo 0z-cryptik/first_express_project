@@ -1,0 +1,22 @@
+<% if (currentUser) { %>
+<div id="chatPage">
+  <h1>Chat</h1>
+  <form id="chatForm">
+    <input
+      type="text"
+      id="chatInput" />
+    <input
+      id="senderName"
+      type="hidden"
+      value="<%= currentUser.fullName() %>" />
+    <input
+      id="senderId"
+      type="hidden"
+      value="<%= currentUser._id %>" />
+    <input
+      type="submit"
+      value="Send" />
+  </form>
+  <div id="chatBox"></div>
+</div>
+<% } %>

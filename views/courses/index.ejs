@@ -1,0 +1,8 @@
+<div>
+  <h1>Courses available today <span id="date"></span></h1>
+  <% offeredCourses.forEach((item) => { %>
+  <h2><%= item.title %></h2>
+  <p>Description: <%= item.description %></p>
+  <p>Price: <%= item.cost %></p>
+  <% }) %>
+</div>
