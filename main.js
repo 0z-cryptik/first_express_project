@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const homeController = require("./controllers/homeController");
 const layouts = require("express-ejs-layouts");
 const passport = require("passport");
+require('dotenv').config()
 let port;
 
 if (process.env.NODE_ENV === "test") {
@@ -21,8 +22,8 @@ const app = express();
 const mongoose = require("mongoose");
 const Subscriber = require("./models/subscribers");
 const Course = require("./models/course");
-const dbTestConnect = "mongodb://127.0.0.1:27017/recipe_test_db";
-const dbConnect = 'mongodb+srv://enitanolawale0:IFSyDaZe6N9xJ4BL@cluster0.cz2kore.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const dbTestConnect = process.env.MONGO_TEST;
+const dbConnect = String(process.env.MONGO_CLUSTER);
 
 const server = app.listen(port, () =>
   console.log(`look alive! listening on port ${port}`)

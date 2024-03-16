@@ -3,3 +3,4 @@
 /simpleTest
 
 **/node_modules
+*.env
