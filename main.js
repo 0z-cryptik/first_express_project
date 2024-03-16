@@ -21,17 +21,19 @@ const app = express();
 const mongoose = require("mongoose");
 const Subscriber = require("./models/subscribers");
 const Course = require("./models/course");
+const dbTestConnect = "mongodb://127.0.0.1:27017/recipe_test_db";
+const dbConnect = 'mongodb+srv://enitanolawale0:IFSyDaZe6N9xJ4BL@cluster0.cz2kore.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 const server = app.listen(port, () =>
   console.log(`look alive! listening on port ${port}`)
 );
 
 if (process.env.NODE_ENV === "test") {
-  mongoose.connect("mongodb://127.0.0.1:27017/recipe_test_db", {
+  mongoose.connect(dbTestConnect, {
     useNewUrLParser: true
   });
 } else {
-  mongoose.connect("mongodb://127.0.0.1:27017/recipe_db", {
+  mongoose.connect(dbConnect, {
     useNewUrLParser: true
   });
 }
